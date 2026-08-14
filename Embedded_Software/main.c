@@ -403,13 +403,20 @@ int main(int argc,
     int golden_scan_count;
 
     /*
-     * Default input files are in the current Linux directory.
+     * Default C-model files on the Linux server.
+     * Command-line arguments, when provided, override these paths.
      */
     input_file_path =
-        (argc >= 2) ? argv[1] : "input_data.txt";
+        (argc >= 2) ?
+        argv[1] :
+        "/home/ubuntu/Hoangviet/FPGA/H_Function/H_Function_FPGA/"
+        "C_Modeling/input_data.txt";
 
     golden_file_path =
-        (argc >= 3) ? argv[2] : "golden_output.txt";
+        (argc >= 3) ?
+        argv[2] :
+        "/home/ubuntu/Hoangviet/FPGA/H_Function/H_Function_FPGA/"
+        "C_Modeling/golden_output.txt";
 
     /* ============================================================
      * Open test files
