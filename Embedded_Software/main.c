@@ -59,19 +59,19 @@
 /*
  * User-provided physical base:
  *
- *     0xA000_000
+ *     0xA000_0000
  *
  * Written in standard C hexadecimal syntax:
  */
-#define H_ACCEL_BASE_PHYS      0x0A000000UL
+#define H_ACCEL_BASE_PHYS 0xA0000000UL
 
 /*
  * Register-space size requested by the user.
  *
  * If 0xFFFF means the highest valid offset, map 0x10000 bytes.
  */
-#define H_ACCEL_REG_SIZE       0xFFFFUL
-#define H_ACCEL_MAP_SIZE       (H_ACCEL_REG_SIZE + 1UL)
+#define H_ACCEL_REG_SIZE 0xFFFFUL
+#define H_ACCEL_MAP_SIZE (H_ACCEL_REG_SIZE + 1UL)
 
 /* ================================================================
  * Arbiter register addresses
@@ -82,33 +82,34 @@
  *
  * DO NOT convert them to 0x00, 0x04, 0x08, ...
  */
-#define A_BASE_ADDR            0U
-#define B_BASE_ADDR            1U
-#define C_BASE_ADDR            2U
-#define D_BASE_ADDR            3U
-#define E_BASE_ADDR            4U
-#define F_BASE_ADDR            5U
+#define A_BASE_ADDR 0U
+#define B_BASE_ADDR 1U
+#define C_BASE_ADDR 2U
+#define D_BASE_ADDR 3U
+#define E_BASE_ADDR 4U
+#define F_BASE_ADDR 5U
 
-#define LOAD_BASE_ADDR         6U
-#define START_BASE_ADDR        7U
-#define STOP_BASE_ADDR         8U
+#define LOAD_BASE_ADDR 6U
+#define START_BASE_ADDR 7U
+#define STOP_BASE_ADDR 8U
 
-#define H_BASE_ADDR            0U
-#define READ_READY_BASE_ADDR   1U
+#define H_BASE_ADDR 0U
+#define READ_READY_BASE_ADDR 1U
 
-#define COMMAND_VALUE          1U
+#define COMMAND_VALUE 1U
 
 /*
  * Current RTL does not yet provide a persistent DONE flag.
  * Give the RTL enough time to complete READ -> COMPUTE -> WRITE.
  */
-#define RESULT_WAIT_NS         1000L
+#define RESULT_WAIT_NS 1000L
 
 /* ================================================================
  * MMIO context
  * ================================================================ */
 
-struct mmio_context {
+struct mmio_context
+{
     int fd;
 
     void *map_base;
@@ -178,7 +179,8 @@ static int mmio_open(struct mmio_context *ctx)
 
     page_size = sysconf(_SC_PAGESIZE);
 
-    if (page_size <= 0) {
+    if (page_size <= 0)
+    {
         fprintf(stderr,
                 "ERROR: Cannot determine system page size\n");
 
@@ -204,7 +206,8 @@ static int mmio_open(struct mmio_context *ctx)
         open("/dev/mem",
              O_RDWR | O_SYNC);
 
-    if (ctx->fd < 0) {
+    if (ctx->fd < 0)
+    {
         fprintf(stderr,
                 "ERROR: Cannot open /dev/mem: %s\n",
                 strerror(errno));
@@ -223,7 +226,8 @@ static int mmio_open(struct mmio_context *ctx)
              ctx->fd,
              page_base);
 
-    if (ctx->map_base == MAP_FAILED) {
+    if (ctx->map_base == MAP_FAILED)
+    {
         fprintf(stderr,
                 "ERROR: mmap() failed: %s\n",
                 strerror(errno));
@@ -242,8 +246,7 @@ static int mmio_open(struct mmio_context *ctx)
      * Convert mapped virtual address to a 32-bit register pointer.
      */
     ctx->ip_reg =
-        (volatile uint32_t *)
-        ((volatile uint8_t *)ctx->map_base + page_offset);
+        (volatile uint32_t *)((volatile uint8_t *)ctx->map_base + page_offset);
 
     return 0;
 }
@@ -251,13 +254,15 @@ static int mmio_open(struct mmio_context *ctx)
 static void mmio_close(struct mmio_context *ctx)
 {
     if ((ctx->map_base != NULL) &&
-        (ctx->map_base != MAP_FAILED)) {
+        (ctx->map_base != MAP_FAILED))
+    {
 
         munmap(ctx->map_base,
                ctx->map_length);
     }
 
-    if (ctx->fd >= 0) {
+    if (ctx->fd >= 0)
+    {
         close(ctx->fd);
     }
 
@@ -342,22 +347,24 @@ static uint32_t h_accel_read_h(volatile uint32_t *ip_reg)
 
 static uint32_t h_accel_read_ready(volatile uint32_t *ip_reg)
 {
-    return
-        mmio_read32(ip_reg,
-                    READ_READY_BASE_ADDR) & 0x1U;
+    return mmio_read32(ip_reg,
+                       READ_READY_BASE_ADDR) &
+           0x1U;
 }
 
 static void h_accel_wait_result(void)
 {
     struct timespec delay_time;
 
-    delay_time.tv_sec  = 0;
+    delay_time.tv_sec = 0;
     delay_time.tv_nsec = RESULT_WAIT_NS;
 
     while (nanosleep(&delay_time,
-                     &delay_time) != 0) {
+                     &delay_time) != 0)
+    {
 
-        if (errno != EINTR) {
+        if (errno != EINTR)
+        {
             break;
         }
     }
@@ -399,14 +406,10 @@ int main(int argc,
      * Default input files are in the current Linux directory.
      */
     input_file_path =
-        (argc >= 2) ?
-        argv[1] :
-        "input_data.txt";
+        (argc >= 2) ? argv[1] : "input_data.txt";
 
     golden_file_path =
-        (argc >= 3) ?
-        argv[2] :
-        "golden_output.txt";
+        (argc >= 3) ? argv[2] : "golden_output.txt";
 
     /* ============================================================
      * Open test files
@@ -416,7 +419,8 @@ int main(int argc,
         fopen(input_file_path,
               "r");
 
-    if (input_file == NULL) {
+    if (input_file == NULL)
+    {
         fprintf(stderr,
                 "ERROR: Cannot open %s: %s\n",
                 input_file_path,
@@ -429,7 +433,8 @@ int main(int argc,
         fopen(golden_file_path,
               "r");
 
-    if (golden_file == NULL) {
+    if (golden_file == NULL)
+    {
         fprintf(stderr,
                 "ERROR: Cannot open %s: %s\n",
                 golden_file_path,
@@ -444,7 +449,8 @@ int main(int argc,
      * Map H_Acceleration_IP
      * ============================================================ */
 
-    if (mmio_open(&mmio) != 0) {
+    if (mmio_open(&mmio) != 0)
+    {
 
         fclose(input_file);
         fclose(golden_file);
@@ -453,8 +459,8 @@ int main(int argc,
     }
 
     total_test_count = 0;
-    pass_count       = 0;
-    fail_count       = 0;
+    pass_count = 0;
+    fail_count = 0;
 
     printf("\n");
     printf("============================================================\n");
@@ -479,7 +485,8 @@ int main(int argc,
      * Run all test vectors
      * ============================================================ */
 
-    while (1) {
+    while (1)
+    {
 
         /*
          * input_data.txt format:
@@ -517,7 +524,8 @@ int main(int argc,
          * Normal end of both files.
          */
         if ((input_scan_count == EOF) &&
-            (golden_scan_count == EOF)) {
+            (golden_scan_count == EOF))
+        {
 
             break;
         }
@@ -525,7 +533,8 @@ int main(int argc,
         /*
          * Detect malformed or mismatched files.
          */
-        if (input_scan_count != 6) {
+        if (input_scan_count != 6)
+        {
             fprintf(stderr,
                     "ERROR: Invalid input_data.txt format "
                     "at test %lu\n",
@@ -536,7 +545,8 @@ int main(int argc,
             break;
         }
 
-        if (golden_scan_count != 1) {
+        if (golden_scan_count != 1)
+        {
             fprintf(stderr,
                     "ERROR: Invalid/missing golden output "
                     "at test %lu\n",
@@ -584,7 +594,8 @@ int main(int argc,
          * Compare against C golden model
          * -------------------------------------------------------- */
 
-        if (dut_h == golden_h) {
+        if (dut_h == golden_h)
+        {
 
             pass_count++;
 
@@ -594,10 +605,10 @@ int main(int argc,
                 "GOLDEN=%08" PRIX32 "\n",
                 total_test_count,
                 dut_h,
-                golden_h
-            );
+                golden_h);
         }
-        else {
+        else
+        {
 
             fail_count++;
 
@@ -607,8 +618,7 @@ int main(int argc,
                 "GOLDEN=%08" PRIX32 "\n",
                 total_test_count,
                 dut_h,
-                golden_h
-            );
+                golden_h);
 
             printf(
                 "       "
@@ -623,8 +633,7 @@ int main(int argc,
                 c,
                 d,
                 e,
-                f
-            );
+                f);
         }
     }
 
@@ -655,11 +664,13 @@ int main(int argc,
     printf("------------------------------------------------------------\n");
 
     if ((fail_count == 0) &&
-        (total_test_count > 0)) {
+        (total_test_count > 0))
+    {
 
         printf("FINAL RESULT     : ALL TESTS PASSED\n");
     }
-    else {
+    else
+    {
 
         printf("FINAL RESULT     : TEST FAILED\n");
     }
@@ -677,7 +688,8 @@ int main(int argc,
     fclose(golden_file);
 
     if ((fail_count == 0) &&
-        (total_test_count > 0)) {
+        (total_test_count > 0))
+    {
 
         return EXIT_SUCCESS;
     }
