@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../RTL/H_arbiter.v" \
+"../../../../../RTL/H_ctrl.v" \
+"../../../../../RTL/H_datapath.v" \
+"../../../../../RTL/H_function_core.v" \
+"../../../../../RTL/H_input_memory.v" \
+"../../../../../RTL/H_output_memory.v" \
+"../../../../../TB/H_function_core_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
