@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Thu Aug 20 10:04:22 2026
+| Date             : Thu Aug 20 15:46:30 2026
 | Host             : Admin-PC running 64-bit major release  (build 9200)
 | Command          : report_power -file SOC_1_wrapper_power_routed.rpt -pb SOC_1_wrapper_power_summary_routed.pb -rpx SOC_1_wrapper_power_routed.rpx
 | Design           : SOC_1_wrapper
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.739        |
+| Total On-Chip Power (W)  | 2.738        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 2.438        |
@@ -53,22 +53,22 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.011 |        5 |       --- |             --- |
-| CLB Logic                |     0.005 |    11425 |       --- |             --- |
-|   LUT as Logic           |     0.003 |     3728 |    117120 |            3.18 |
+| CLB Logic                |     0.005 |    11429 |       --- |             --- |
+|   LUT as Logic           |     0.003 |     3724 |    117120 |            3.18 |
 |   LUT as Shift Register  |    <0.001 |      239 |     57600 |            0.41 |
 |   LUT as Distributed RAM |    <0.001 |      108 |     57600 |            0.19 |
 |   Register               |    <0.001 |     5722 |    234240 |            2.44 |
 |   CARRY8                 |    <0.001 |       52 |     14640 |            0.36 |
-|   Others                 |     0.000 |      435 |       --- |             --- |
+|   Others                 |     0.000 |      438 |       --- |             --- |
+|   BUFG                   |     0.000 |        2 |        32 |            6.25 |
 |   F7/F8 Muxes            |     0.000 |        9 |    117120 |           <0.01 |
-|   BUFG                   |     0.000 |        1 |        32 |            3.13 |
-| Signals                  |     0.004 |     9105 |       --- |             --- |
+| Signals                  |     0.004 |     9133 |       --- |             --- |
 | Block RAM                |     0.001 |        2 |       144 |            1.39 |
 | PS8                      |     2.417 |        1 |       --- |             --- |
 | Static Power             |     0.301 |          |           |                 |
 |   PS Static              |     0.000 |          |           |                 |
 |   PL Static              |     0.301 |          |           |                 |
-| Total                    |     2.739 |          |           |                 |
+| Total                    |     2.738 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,7 +78,7 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint          |       0.720 |     0.116 |       0.029 |      0.087 |       NA    | Unspecified | NA         |
+| Vccint          |       0.720 |     0.115 |       0.028 |      0.087 |       NA    | Unspecified | NA         |
 | Vccint_io       |       0.850 |     0.036 |       0.000 |      0.036 |       NA    | Unspecified | NA         |
 | Vccbram         |       0.850 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vccaux          |       1.800 |     0.075 |       0.000 |      0.075 |       NA    | Unspecified | NA         |
@@ -168,8 +168,8 @@ Table of Contents
 +-----------------------------+-----------+
 | SOC_1_wrapper               |     2.438 |
 |   SOC_1_i                   |     2.436 |
-|     H_Accerlation_IP_v1_0_0 |     0.008 |
-|       inst                  |     0.008 |
+|     H_Accerlation_IP_v1_0_0 |     0.007 |
+|       inst                  |     0.007 |
 |     ps8_0_axi_periph        |     0.011 |
 |       s00_couplers          |     0.005 |
 |       s01_couplers          |     0.005 |

@@ -62,6 +62,15 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../../SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_xbar_0/sim/SOC_1_xbar_0.v" \
 -endlib
+-makelib xcelium_lib/lib_cdc_v1_0_2 \
+  "../../../../SOC_1.gen/sources_1/bd/SOC_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/proc_sys_reset_v5_0_13 \
+  "../../../../SOC_1.gen/sources_1/bd/SOC_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../../SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_rst_ps8_0_99M_0/sim/SOC_1_rst_ps8_0_99M_0.vhd" \
+-endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_27 \
   "../../../../SOC_1.gen/sources_1/bd/SOC_1/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 -endlib
@@ -79,17 +88,6 @@
   "../../../../SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_auto_pc_0/sim/SOC_1_auto_pc_0.v" \
   "../../../../SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_auto_ds_1/sim/SOC_1_auto_ds_1.v" \
   "../../../../SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_auto_pc_1/sim/SOC_1_auto_pc_1.v" \
--endlib
--makelib xcelium_lib/lib_cdc_v1_0_2 \
-  "../../../../SOC_1.gen/sources_1/bd/SOC_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
--endlib
--makelib xcelium_lib/proc_sys_reset_v5_0_13 \
-  "../../../../SOC_1.gen/sources_1/bd/SOC_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../../SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_rst_ps8_0_99M_0/sim/SOC_1_rst_ps8_0_99M_0.vhd" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
   "../../../../SOC_1.gen/sources_1/bd/SOC_1/sim/SOC_1.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Thu Aug 20 09:58:32 2026
+| Date         : Thu Aug 20 15:42:46 2026
 | Host         : Admin-PC running 64-bit major release  (build 9200)
 | Command      : report_utilization -file SOC_1_wrapper_utilization_synth.rpt -pb SOC_1_wrapper_utilization_synth.pb
 | Design       : SOC_1_wrapper
@@ -32,14 +32,14 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*                  | 4074 |     0 |          0 |    117120 |  3.48 |
-|   LUT as Logic             | 3715 |     0 |          0 |    117120 |  3.17 |
+| CLB LUTs*                  | 4073 |     0 |          0 |    117120 |  3.48 |
+|   LUT as Logic             | 3714 |     0 |          0 |    117120 |  3.17 |
 |   LUT as Memory            |  359 |     0 |          0 |     57600 |  0.62 |
 |     LUT as Distributed RAM |   88 |     0 |            |           |       |
 |     LUT as Shift Register  |  271 |     0 |            |           |       |
 | CLB Registers              | 5034 |     0 |          0 |    234240 |  2.15 |
-|   Register as Flip Flop    | 5034 |     0 |          0 |    234240 |  2.15 |
-|   Register as Latch        |    0 |     0 |          0 |    234240 |  0.00 |
+|   Register as Flip Flop    | 5002 |     0 |          0 |    234240 |  2.14 |
+|   Register as Latch        |   32 |     0 |          0 |    234240 |  0.01 |
 | CARRY8                     |   45 |     0 |          0 |     14640 |  0.31 |
 | F7 Muxes                   |    9 |     0 |          0 |     58560 |  0.02 |
 | F8 Muxes                   |    0 |     0 |          0 |     29280 |  0.00 |
@@ -109,8 +109,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------------------+------+-------+------------+-----------+-------+
 |       Site Type      | Used | Fixed | Prohibited | Available | Util% |
 +----------------------+------+-------+------------+-----------+-------+
-| GLOBAL CLOCK BUFFERs |    2 |     0 |          0 |       352 |  0.57 |
-|   BUFGCE             |    0 |     0 |          0 |       112 |  0.00 |
+| GLOBAL CLOCK BUFFERs |    3 |     0 |          0 |       352 |  0.85 |
+|   BUFGCE             |    1 |     0 |          0 |       112 |  0.89 |
 |   BUFGCE_DIV         |    0 |     0 |          0 |        16 |  0.00 |
 |   BUFG_GT            |    0 |     0 |          0 |        96 |  0.00 |
 |   BUFG_PS            |    2 |     0 |          0 |        96 |  2.08 |
@@ -163,23 +163,25 @@ Warning! LUT value is adjusted to account for LUT combining.
 | FDRE     | 4287 |            Register |
 | LUT6     | 1559 |                 CLB |
 | LUT5     |  833 |                 CLB |
-| LUT3     |  728 |                 CLB |
-| FDCE     |  624 |            Register |
-| LUT4     |  471 |                 CLB |
-| LUT2     |  448 |                 CLB |
+| LUT3     |  758 |                 CLB |
+| FDCE     |  592 |            Register |
+| LUT4     |  472 |                 CLB |
 | LUT1     |  418 |                 CLB |
+| LUT2     |  417 |                 CLB |
 | SRLC32E  |  173 |                 CLB |
 | SRL16E   |  172 |                 CLB |
 | RAMD32   |  148 |                 CLB |
 | FDPE     |   66 |            Register |
 | FDSE     |   57 |            Register |
 | CARRY8   |   45 |                 CLB |
+| LDCE     |   32 |            Register |
 | RAMS32   |   20 |                 CLB |
 | MUXF7    |    9 |                 CLB |
 | SRLC16E  |    2 |                 CLB |
 | RAMB36E2 |    2 |            BLOCKRAM |
 | BUFG_PS  |    2 |               Clock |
 | PS8      |    1 |            Advanced |
+| BUFGCE   |    1 |               Clock |
 +----------+------+---------------------+
 
 

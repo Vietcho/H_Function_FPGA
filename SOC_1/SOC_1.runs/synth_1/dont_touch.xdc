@@ -16,6 +16,12 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ila_debug |
 # IP: bd/SOC_1/ip/SOC_1_xbar_0/SOC_1_xbar_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==SOC_1_xbar_0 || ORIG_REF_NAME==SOC_1_xbar_0} -quiet] -quiet
 
+# IP: bd/SOC_1/ip/SOC_1_ps8_0_axi_periph_0/SOC_1_ps8_0_axi_periph_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==SOC_1_ps8_0_axi_periph_0 || ORIG_REF_NAME==SOC_1_ps8_0_axi_periph_0} -quiet] -quiet
+
+# IP: bd/SOC_1/ip/SOC_1_rst_ps8_0_99M_0/SOC_1_rst_ps8_0_99M_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==SOC_1_rst_ps8_0_99M_0 || ORIG_REF_NAME==SOC_1_rst_ps8_0_99M_0} -quiet] -quiet
+
 # IP: bd/SOC_1/ip/SOC_1_auto_ds_0/SOC_1_auto_ds_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==SOC_1_auto_ds_0 || ORIG_REF_NAME==SOC_1_auto_ds_0} -quiet] -quiet
 
@@ -27,12 +33,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==SOC_1_auto_
 
 # IP: bd/SOC_1/ip/SOC_1_auto_pc_1/SOC_1_auto_pc_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==SOC_1_auto_pc_1 || ORIG_REF_NAME==SOC_1_auto_pc_1} -quiet] -quiet
-
-# IP: bd/SOC_1/ip/SOC_1_ps8_0_axi_periph_0/SOC_1_ps8_0_axi_periph_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==SOC_1_ps8_0_axi_periph_0 || ORIG_REF_NAME==SOC_1_ps8_0_axi_periph_0} -quiet] -quiet
-
-# IP: bd/SOC_1/ip/SOC_1_rst_ps8_0_99M_0/SOC_1_rst_ps8_0_99M_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==SOC_1_rst_ps8_0_99M_0 || ORIG_REF_NAME==SOC_1_rst_ps8_0_99M_0} -quiet] -quiet
 
 # XDC: d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_zynq_ultra_ps_e_0_0/SOC_1_zynq_ultra_ps_e_0_0_ooc.xdc
 
@@ -49,6 +49,12 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 
 # XDC: d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_xbar_0/SOC_1_xbar_0_ooc.xdc
 
+# XDC: d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_rst_ps8_0_99M_0/SOC_1_rst_ps8_0_99M_0_board.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==SOC_1_rst_ps8_0_99M_0 || ORIG_REF_NAME==SOC_1_rst_ps8_0_99M_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_rst_ps8_0_99M_0/SOC_1_rst_ps8_0_99M_0.xdc
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==SOC_1_rst_ps8_0_99M_0 || ORIG_REF_NAME==SOC_1_rst_ps8_0_99M_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
 # XDC: d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_auto_ds_0/SOC_1_auto_ds_0_clocks.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==SOC_1_auto_ds_0 || ORIG_REF_NAME==SOC_1_auto_ds_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
@@ -62,11 +68,5 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 # XDC: d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_auto_ds_1/SOC_1_auto_ds_1_ooc.xdc
 
 # XDC: d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_auto_pc_1/SOC_1_auto_pc_1_ooc.xdc
-
-# XDC: d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_rst_ps8_0_99M_0/SOC_1_rst_ps8_0_99M_0_board.xdc
-set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==SOC_1_rst_ps8_0_99M_0 || ORIG_REF_NAME==SOC_1_rst_ps8_0_99M_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_rst_ps8_0_99M_0/SOC_1_rst_ps8_0_99M_0.xdc
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==SOC_1_rst_ps8_0_99M_0 || ORIG_REF_NAME==SOC_1_rst_ps8_0_99M_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
 # XDC: d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/SOC_1_ooc.xdc

@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Aug 20 09:55:06 2026
-# Process ID: 5416
+# Start of session at: Thu Aug 20 15:39:32 2026
+# Process ID: 36624
 # Current directory: D:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.runs/synth_1
 # Command line: vivado.exe -log SOC_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SOC_1_wrapper.tcl
 # Log file: D:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.runs/synth_1/SOC_1_wrapper.vds
@@ -11,21 +11,26 @@
 # Running On: Admin-PC, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 4, Host memory: 15417 MB
 #-----------------------------------------------------------
 source SOC_1_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 409.777 ; gain = 61.492
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 410.664 ; gain = 88.301
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function'.
 WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'd:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'd:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.runs/synth_1'.)
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.2/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
 Current IP cache path is d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.cache/ip 
+Command: read_checkpoint -auto_incremental -incremental D:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.srcs/utils_1/imports/synth_1/SOC_1_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.srcs/utils_1/imports/synth_1/SOC_1_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top SOC_1_wrapper -part xck26-sfvc784-2LV-c
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 16896
+INFO: [Synth 8-7075] Helper process launched with PID 39324
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 INFO: [Synth 8-11241] undeclared symbol 'dp_audi_ref_clk', assumed default net type 'wire' [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_4_1.v:2470]
 INFO: [Synth 8-11241] undeclared symbol 'rddata_rst_i', assumed default net type 'wire' [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_H_Accerlation_IP_v1_0_0_0/H_Function_ILA_IP/H_Function_ILA_IP.srcs/sources_1/ip/ila_debug/hdl/xsdbm_v3_0_vl_rfs.v:2188]
@@ -138,9 +143,9 @@ WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode 
 WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_H_Accerlation_IP_v1_0_0_0/H_Function_ILA_IP/H_Function_ILA_IP.srcs/sources_1/ip/ila_debug/hdl/ila_v6_2_syn_rfs.v:4588]
 WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_H_Accerlation_IP_v1_0_0_0/H_Function_ILA_IP/H_Function_ILA_IP.srcs/sources_1/ip/ila_debug/hdl/ila_v6_2_syn_rfs.v:5486]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1865.098 ; gain = 360.676
+Starting RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1867.770 ; gain = 361.410
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'SOC_1_wrapper' [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/hdl/SOC_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'SOC_1_wrapper' [D:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/hdl/SOC_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'SOC_1' [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/synth/SOC_1.v:12]
 INFO: [Synth 8-6157] synthesizing module 'SOC_1_H_Accerlation_IP_v1_0_0_0' [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_H_Accerlation_IP_v1_0_0_0/synth/SOC_1_H_Accerlation_IP_v1_0_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'H_Accerlation_IP_v1_0' [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ipshared/81a8/ip_repo/H_Accerlation_IP_1_0/hdl/H_Accerlation_IP_v1_0.v:4]
@@ -455,7 +460,7 @@ WARNING: [Synth 8-7071] port 'maxigp1_aruser' of module 'SOC_1_zynq_ultra_ps_e_0
 WARNING: [Synth 8-7071] port 'pl_clk1' of module 'SOC_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/synth/SOC_1.v:244]
 WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'SOC_1_zynq_ultra_ps_e_0_0' has 84 connections declared, but only 79 given [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/synth/SOC_1.v:244]
 INFO: [Synth 8-6155] done synthesizing module 'SOC_1' (0#1) [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/synth/SOC_1.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'SOC_1_wrapper' (0#1) [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/hdl/SOC_1_wrapper.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'SOC_1_wrapper' (0#1) [D:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/hdl/SOC_1_wrapper.v:12]
 WARNING: [Synth 8-3848] Net sl_iport0 in module/entity ila_debug does not have driver. [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_H_Accerlation_IP_v1_0_0_0/H_Function_ILA_IP/H_Function_ILA_IP.srcs/sources_1/ip/ila_debug/synth/ila_debug.v:108]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila'. This will prevent further optimization [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ipshared/81a8/ip_repo/H_Accerlation_IP_1_0/hdl/H_Accerlation_IP_v1_0_S00_AXI.v:437]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'DUT'. This will prevent further optimization [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ipshared/81a8/ip_repo/H_Accerlation_IP_1_0/hdl/H_Accerlation_IP_v1_0_S00_AXI.v:425]
@@ -580,18 +585,18 @@ WARNING: [Synth 8-7129] Port test_adc2_in[8] in module zynq_ultra_ps_e_v3_4_1_zy
 WARNING: [Synth 8-7129] Port test_adc2_in[7] in module zynq_ultra_ps_e_v3_4_1_zynq_ultra_ps_e is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 2377.262 ; gain = 872.840
+Finished RTL Elaboration : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 2383.070 ; gain = 876.711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:01:01 . Memory (MB): peak = 2377.262 ; gain = 872.840
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 2383.070 ; gain = 876.711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:57 ; elapsed = 00:01:01 . Memory (MB): peak = 2377.262 ; gain = 872.840
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 2383.070 ; gain = 876.711
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.616 . Memory (MB): peak = 2377.262 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.550 . Memory (MB): peak = 2383.070 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 128 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -599,14 +604,13 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_zynq_ultra_ps_e_0_0/SOC_1_zynq_ultra_ps_e_0_0.xdc] for cell 'SOC_1_i/zynq_ultra_ps_e_0/inst'
-create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2487.605 ; gain = 0.137
 Finished Parsing XDC File [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_zynq_ultra_ps_e_0_0/SOC_1_zynq_ultra_ps_e_0_0.xdc] for cell 'SOC_1_i/zynq_ultra_ps_e_0/inst'
-Parsing XDC File [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_H_Accerlation_IP_v1_0_0_0/H_Function_ILA_IP/H_Function_ILA_IP.srcs/sources_1/ip/ila_debug/ila_v6_2/constraints/ila.xdc] for cell 'SOC_1_i/H_Accerlation_IP_v1_0_0/inst/H_Accerlation_IP_v1_0_S00_AXI_inst/ila/inst'
-Finished Parsing XDC File [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_H_Accerlation_IP_v1_0_0_0/H_Function_ILA_IP/H_Function_ILA_IP.srcs/sources_1/ip/ila_debug/ila_v6_2/constraints/ila.xdc] for cell 'SOC_1_i/H_Accerlation_IP_v1_0_0/inst/H_Accerlation_IP_v1_0_S00_AXI_inst/ila/inst'
 Parsing XDC File [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_rst_ps8_0_99M_0/SOC_1_rst_ps8_0_99M_0_board.xdc] for cell 'SOC_1_i/rst_ps8_0_99M/U0'
 Finished Parsing XDC File [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_rst_ps8_0_99M_0/SOC_1_rst_ps8_0_99M_0_board.xdc] for cell 'SOC_1_i/rst_ps8_0_99M/U0'
 Parsing XDC File [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_rst_ps8_0_99M_0/SOC_1_rst_ps8_0_99M_0.xdc] for cell 'SOC_1_i/rst_ps8_0_99M/U0'
 Finished Parsing XDC File [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_rst_ps8_0_99M_0/SOC_1_rst_ps8_0_99M_0.xdc] for cell 'SOC_1_i/rst_ps8_0_99M/U0'
+Parsing XDC File [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_H_Accerlation_IP_v1_0_0_0/H_Function_ILA_IP/H_Function_ILA_IP.srcs/sources_1/ip/ila_debug/ila_v6_2/constraints/ila.xdc] for cell 'SOC_1_i/H_Accerlation_IP_v1_0_0/inst/H_Accerlation_IP_v1_0_S00_AXI_inst/ila/inst'
+Finished Parsing XDC File [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_H_Accerlation_IP_v1_0_0_0/H_Function_ILA_IP/H_Function_ILA_IP.srcs/sources_1/ip/ila_debug/ila_v6_2/constraints/ila.xdc] for cell 'SOC_1_i/H_Accerlation_IP_v1_0_0/inst/H_Accerlation_IP_v1_0_S00_AXI_inst/ila/inst'
 Parsing XDC File [D:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [D:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.runs/synth_1/dont_touch.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/SOC_1_wrapper_propImpl.xdc].
@@ -614,7 +618,7 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/SOC_1_wrappe
 INFO: [Project 1-1714] 6 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2487.605 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2456.594 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 99 instances were transformed.
   CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 76 instances
@@ -622,9 +626,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.296 . Memory (MB): peak = 2487.605 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.280 . Memory (MB): peak = 2456.594 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:20 ; elapsed = 00:01:26 . Memory (MB): peak = 2487.605 ; gain = 983.184
+Finished Constraint Validation : Time (s): cpu = 00:01:11 ; elapsed = 00:01:13 . Memory (MB): peak = 2456.594 ; gain = 950.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -632,7 +638,7 @@ Start Loading Part and Timing Information
 Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:20 ; elapsed = 00:01:26 . Memory (MB): peak = 2487.605 ; gain = 983.184
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:11 ; elapsed = 00:01:14 . Memory (MB): peak = 2456.594 ; gain = 950.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -640,13 +646,11 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property DONT_TOUCH = true for SOC_1_i/zynq_ultra_ps_e_0/inst/PS8_i. (constraint file  d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_zynq_ultra_ps_e_0_0/SOC_1_zynq_ultra_ps_e_0_0.xdc, line 26).
 Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/zynq_ultra_ps_e_0/inst. (constraint file  D:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.runs/synth_1/dont_touch.xdc, line 40).
 Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/H_Accerlation_IP_v1_0_0/inst/H_Accerlation_IP_v1_0_S00_AXI_inst/ila/inst. (constraint file  D:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.runs/synth_1/dont_touch.xdc, line 43).
-Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst. (constraint file  D:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.runs/synth_1/dont_touch.xdc, line 53).
-Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst. (constraint file  D:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.runs/synth_1/dont_touch.xdc, line 60).
-Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/rst_ps8_0_99M/U0. (constraint file  D:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.runs/synth_1/dont_touch.xdc, line 67).
+Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/rst_ps8_0_99M/U0. (constraint file  D:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.runs/synth_1/dont_touch.xdc, line 53).
+Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst. (constraint file  D:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.runs/synth_1/dont_touch.xdc, line 59).
+Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst. (constraint file  D:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.runs/synth_1/dont_touch.xdc, line 66).
 Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/H_Accerlation_IP_v1_0_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/H_Accerlation_IP_v1_0_0/inst/H_Accerlation_IP_v1_0_S00_AXI_inst/ila. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/ps8_0_axi_periph/xbar. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/ps8_0_axi_periph/s00_couplers/auto_ds. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/ps8_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
@@ -654,6 +658,8 @@ Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/ps8_0_axi_periph/s01_coup
 Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/ps8_0_axi_periph/s01_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/ps8_0_axi_periph. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/rst_ps8_0_99M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/H_Accerlation_IP_v1_0_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/H_Accerlation_IP_v1_0_0/inst/H_Accerlation_IP_v1_0_S00_AXI_inst/ila. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst /\USE_WRITE.write_addr_inst /\USE_B_CHANNEL.cmd_b_queue /inst/fifo_gen_inst/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst /\USE_WRITE.write_addr_inst /cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst /\USE_READ.read_addr_inst /cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint).
@@ -661,7 +667,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/ps8_0_axi_periph/s01_coup
 Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst /\USE_WRITE.write_addr_inst /cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for SOC_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst /\USE_READ.read_addr_inst /cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:20 ; elapsed = 00:01:26 . Memory (MB): peak = 2487.605 ; gain = 983.184
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:11 ; elapsed = 00:01:14 . Memory (MB): peak = 2456.594 ; gain = 950.234
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_r_reg' in module 'H_ctrl'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s'
@@ -676,6 +682,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in modul
 INFO: [Synth 8-802] inferred FSM for state register 'gpregsm1.curr_fwft_state_reg' in module 'fifo_generator_v13_2_7_rd_fwft'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_27_b2s_wr_cmd_fsm'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_27_b2s_rd_cmd_fsm'
+WARNING: [Synth 8-327] inferring latch for variable 'r_data_o_reg' [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ipshared/81a8/RTL/H_arbiter.v:283]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -807,7 +814,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_protocol_converter_v2_1_27_b2s_rd_cmd_fsm'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:26 ; elapsed = 00:01:32 . Memory (MB): peak = 2487.605 ; gain = 983.184
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:16 ; elapsed = 00:01:19 . Memory (MB): peak = 2456.594 ; gain = 950.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -846,25 +853,25 @@ WARNING: [Synth 8-3332] Sequential element (BSR_OUT_DFF[0].FDRE_BSR) is unused a
 WARNING: [Synth 8-3332] Sequential element (ACTIVE_LOW_BSR_OUT_DFF[0].FDRE_BSR_N) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (PR_OUT_DFF[0].FDRE_PER) is unused and will be removed from module proc_sys_reset.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:54 ; elapsed = 00:02:02 . Memory (MB): peak = 2487.605 ; gain = 983.184
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:40 ; elapsed = 00:01:44 . Memory (MB): peak = 2456.594 ; gain = 950.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:17 ; elapsed = 00:02:28 . Memory (MB): peak = 3580.184 ; gain = 2075.762
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:00 ; elapsed = 00:02:06 . Memory (MB): peak = 3574.387 ; gain = 2068.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:22 ; elapsed = 00:02:33 . Memory (MB): peak = 3686.602 ; gain = 2182.180
+Finished Timing Optimization : Time (s): cpu = 00:02:04 ; elapsed = 00:02:10 . Memory (MB): peak = 3681.195 ; gain = 2174.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:27 ; elapsed = 00:02:39 . Memory (MB): peak = 3704.715 ; gain = 2200.293
+Finished Technology Mapping : Time (s): cpu = 00:02:08 ; elapsed = 00:02:15 . Memory (MB): peak = 3699.293 ; gain = 2192.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1084,37 +1091,37 @@ WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ipshared/4675/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:1914]
 INFO: [Common 17-14] Message 'Synth 8-5396' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:34 ; elapsed = 00:02:46 . Memory (MB): peak = 3704.715 ; gain = 2200.293
+Finished IO Insertion : Time (s): cpu = 00:02:13 ; elapsed = 00:02:21 . Memory (MB): peak = 3699.293 ; gain = 2192.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:34 ; elapsed = 00:02:46 . Memory (MB): peak = 3704.715 ; gain = 2200.293
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:14 ; elapsed = 00:02:21 . Memory (MB): peak = 3699.293 ; gain = 2192.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:35 ; elapsed = 00:02:47 . Memory (MB): peak = 3704.715 ; gain = 2200.293
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:14 ; elapsed = 00:02:22 . Memory (MB): peak = 3699.293 ; gain = 2192.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:35 ; elapsed = 00:02:47 . Memory (MB): peak = 3704.715 ; gain = 2200.293
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:14 ; elapsed = 00:02:22 . Memory (MB): peak = 3699.293 ; gain = 2192.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:35 ; elapsed = 00:02:47 . Memory (MB): peak = 3704.715 ; gain = 2200.293
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:15 ; elapsed = 00:02:22 . Memory (MB): peak = 3699.293 ; gain = 2192.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:35 ; elapsed = 00:02:48 . Memory (MB): peak = 3704.715 ; gain = 2200.293
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:15 ; elapsed = 00:02:22 . Memory (MB): peak = 3699.293 ; gain = 2192.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1130,60 +1137,64 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |BUFG_PS  |     2|
-|2     |CARRY4   |    29|
-|3     |CARRY8   |    28|
-|4     |CFGLUT5  |    86|
-|5     |LUT1     |   418|
-|6     |LUT2     |   448|
-|7     |LUT3     |   728|
-|8     |LUT4     |   471|
-|9     |LUT5     |   833|
-|10    |LUT6     |  1559|
-|11    |MUXF7    |     9|
-|12    |PS8      |     1|
-|13    |RAM32M16 |    10|
-|14    |RAM32X1D |     4|
-|15    |RAMB36E2 |     2|
-|16    |SRL16    |     1|
-|17    |SRL16E   |    95|
-|18    |SRLC16E  |     2|
-|19    |SRLC32E  |    87|
-|20    |FDCE     |   624|
-|21    |FDPE     |    66|
-|22    |FDR      |     8|
-|23    |FDRE     |  4279|
-|24    |FDSE     |    57|
+|1     |BUFG     |     1|
+|2     |BUFG_PS  |     2|
+|3     |CARRY4   |    29|
+|4     |CARRY8   |    28|
+|5     |CFGLUT5  |    86|
+|6     |LUT1     |   418|
+|7     |LUT2     |   417|
+|8     |LUT3     |   758|
+|9     |LUT4     |   472|
+|10    |LUT5     |   833|
+|11    |LUT6     |  1559|
+|12    |MUXF7    |     9|
+|13    |PS8      |     1|
+|14    |RAM32M16 |    10|
+|15    |RAM32X1D |     4|
+|16    |RAMB36E2 |     2|
+|17    |SRL16    |     1|
+|18    |SRL16E   |    95|
+|19    |SRLC16E  |     2|
+|20    |SRLC32E  |    87|
+|21    |FDCE     |   592|
+|22    |FDPE     |    66|
+|23    |FDR      |     8|
+|24    |FDRE     |  4279|
+|25    |FDSE     |    57|
+|26    |LD       |    32|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:35 ; elapsed = 00:02:48 . Memory (MB): peak = 3704.715 ; gain = 2200.293
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:15 ; elapsed = 00:02:22 . Memory (MB): peak = 3699.293 ; gain = 2192.934
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 8495 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:22 ; elapsed = 00:02:30 . Memory (MB): peak = 3704.715 ; gain = 2089.949
-Synthesis Optimization Complete : Time (s): cpu = 00:02:35 ; elapsed = 00:02:48 . Memory (MB): peak = 3704.715 ; gain = 2200.293
+Synthesis finished with 0 errors, 0 critical warnings and 8496 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:11 ; elapsed = 00:02:07 . Memory (MB): peak = 3699.293 ; gain = 2119.410
+Synthesis Optimization Complete : Time (s): cpu = 00:02:15 ; elapsed = 00:02:22 . Memory (MB): peak = 3699.293 ; gain = 2192.934
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.379 . Memory (MB): peak = 3704.715 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 175 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.338 . Memory (MB): peak = 3699.293 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 208 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Chipscope 16-324] Core: SOC_1_i/H_Accerlation_IP_v1_0_0/inst/H_Accerlation_IP_v1_0_S00_AXI_inst/ila UUID: d24ee710-d832-5a78-8950-5d56fe2e6de1 
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 3735.031 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 3725.309 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 126 instances were transformed.
+  A total of 159 instances were transformed.
   (CARRY4) => CARRY8: 17 instances
+  BUFG => BUFGCE: 1 instance 
   CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 76 instances
   CFGLUT5 => SRLC32E: 10 instances
   FDR => FDRE: 8 instances
+  LD => LDCE: 32 instances
   RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 10 instances
   RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
   SRL16 => SRL16E: 1 instance 
 
-Synth Design complete, checksum: 12828e4c
+Synth Design complete, checksum: 2d443fe8
 INFO: [Common 17-83] Releasing license: Synthesis
-370 Infos, 431 Warnings, 0 Critical Warnings and 0 Errors encountered.
+376 Infos, 432 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:50 ; elapsed = 00:03:09 . Memory (MB): peak = 3735.031 ; gain = 3243.887
+synth_design: Time (s): cpu = 00:02:28 ; elapsed = 00:02:50 . Memory (MB): peak = 3725.309 ; gain = 3226.906
 INFO: [Common 17-1381] The checkpoint 'D:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.runs/synth_1/SOC_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file SOC_1_wrapper_utilization_synth.rpt -pb SOC_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Aug 20 09:58:32 2026...
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 20 15:42:46 2026...

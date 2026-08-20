@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
 set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xck26-sfvc784-2LV-c
@@ -90,7 +91,7 @@ set_property ip_output_repo d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/hdl/SOC_1_wrapper.v
+read_verilog -library xil_defaultlib D:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/hdl/SOC_1_wrapper.v
 add_files D:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.srcs/sources_1/bd/SOC_1/SOC_1.bd
 set_property used_in_implementation false [get_files -all d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_zynq_ultra_ps_e_0_0/SOC_1_zynq_ultra_ps_e_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_zynq_ultra_ps_e_0_0/SOC_1_zynq_ultra_ps_e_0_0.xdc]
@@ -99,6 +100,8 @@ set_property used_in_implementation false [get_files -all d:/TAI_LIEU/DU_AN_XU_L
 set_property used_in_implementation false [get_files -all d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_H_Accerlation_IP_v1_0_0_0/H_Function_ILA_IP/H_Function_ILA_IP.srcs/sources_1/ip/ila_debug/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_H_Accerlation_IP_v1_0_0_0/H_Function_ILA_IP/H_Function_ILA_IP.srcs/sources_1/ip/ila_debug/ila_debug_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_xbar_0/SOC_1_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_rst_ps8_0_99M_0/SOC_1_rst_ps8_0_99M_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_rst_ps8_0_99M_0/SOC_1_rst_ps8_0_99M_0.xdc]
 set_property used_in_synthesis false [get_files -all d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_auto_ds_0/SOC_1_auto_ds_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_auto_ds_0/SOC_1_auto_ds_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_auto_ds_0/SOC_1_auto_ds_0_ooc.xdc]
@@ -107,8 +110,6 @@ set_property used_in_synthesis false [get_files -all d:/TAI_LIEU/DU_AN_XU_LY_TIN
 set_property used_in_implementation false [get_files -all d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_auto_ds_1/SOC_1_auto_ds_1_clocks.xdc]
 set_property used_in_implementation false [get_files -all d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_auto_ds_1/SOC_1_auto_ds_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_auto_pc_1/SOC_1_auto_pc_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_rst_ps8_0_99M_0/SOC_1_rst_ps8_0_99M_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/ip/SOC_1_rst_ps8_0_99M_0/SOC_1_rst_ps8_0_99M_0.xdc]
 set_property used_in_implementation false [get_files -all d:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.gen/sources_1/bd/SOC_1/SOC_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }
@@ -123,6 +124,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental D:/TAI_LIEU/DU_AN_XU_LY_TINHIEU/XU_LY_TIN_HIEU_FPGA/IP_FPGA/H_function/SOC_1/SOC_1.srcs/utils_1/imports/synth_1/SOC_1_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

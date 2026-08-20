@@ -276,24 +276,20 @@ module H_arbiter #(
     //
     // Therefore r_data_o has one full CLK cycle of latency from the
     // accepted r_addr_valid_i request.
-    always @(posedge CLK or negedge RST) begin
-        if (!RST) begin
-            r_data_o <= {DATA_WIDTH{1'b0}};
-        end
-        else begin
+    always @(*) 
+        begin
             if (r_addr_valid_r) begin
                 if (h_addr_hit_w) begin
-                    r_data_o <= output_mem_r_data_i;
+                    r_data_o = output_mem_r_data_i;
                 end
                 else if (read_ready_addr_hit_w) begin
-                    r_data_o <=
+                    r_data_o =
                         {{(DATA_WIDTH-1){1'b0}}, READ_ready_sample_r};
                 end
                 else begin
-                    r_data_o <= {DATA_WIDTH{1'b0}};
+                    r_data_o = {DATA_WIDTH{1'b0}};
                 end
             end
         end
-    end
 
 endmodule

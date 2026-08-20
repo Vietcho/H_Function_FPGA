@@ -12,7 +12,6 @@
     },
     "design_tree": {
       "zynq_ultra_ps_e_0": "",
-      "H_Accerlation_IP_v1_0_0": "",
       "ps8_0_axi_periph": {
         "xbar": "",
         "s00_couplers": {
@@ -25,7 +24,8 @@
         },
         "m00_couplers": {}
       },
-      "rst_ps8_0_99M": ""
+      "rst_ps8_0_99M": "",
+      "H_Accerlation_IP_v1_0_0": ""
     },
     "components": {
       "zynq_ultra_ps_e_0": {
@@ -1266,19 +1266,6 @@
           }
         }
       },
-      "H_Accerlation_IP_v1_0_0": {
-        "vlnv": "xilinx.com:user:H_Accerlation_IP_v1_0:1.0",
-        "xci_name": "SOC_1_H_Accerlation_IP_v1_0_0_0",
-        "xci_path": "ip\\SOC_1_H_Accerlation_IP_v1_0_0_0\\SOC_1_H_Accerlation_IP_v1_0_0_0.xci",
-        "inst_hier_path": "H_Accerlation_IP_v1_0_0",
-        "interface_ports": {
-          "s00_axi": {
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "mode": "Slave",
-            "memory_map_ref": "s00_axi"
-          }
-        }
-      },
       "ps8_0_axi_periph": {
         "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
         "xci_path": "ip\\SOC_1_ps8_0_axi_periph_0\\SOC_1_ps8_0_axi_periph_0.xci",
@@ -1797,6 +1784,19 @@
         "xci_name": "SOC_1_rst_ps8_0_99M_0",
         "xci_path": "ip\\SOC_1_rst_ps8_0_99M_0\\SOC_1_rst_ps8_0_99M_0.xci",
         "inst_hier_path": "rst_ps8_0_99M"
+      },
+      "H_Accerlation_IP_v1_0_0": {
+        "vlnv": "xilinx.com:user:H_Accerlation_IP_v1_0:1.0",
+        "xci_name": "SOC_1_H_Accerlation_IP_v1_0_0_0",
+        "xci_path": "ip\\SOC_1_H_Accerlation_IP_v1_0_0_0\\SOC_1_H_Accerlation_IP_v1_0_0_0.xci",
+        "inst_hier_path": "H_Accerlation_IP_v1_0_0",
+        "interface_ports": {
+          "s00_axi": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Slave",
+            "memory_map_ref": "s00_axi"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1824,10 +1824,10 @@
         "ports": [
           "rst_ps8_0_99M/peripheral_aresetn",
           "ps8_0_axi_periph/S00_ARESETN",
-          "H_Accerlation_IP_v1_0_0/s00_axi_aresetn",
           "ps8_0_axi_periph/M00_ARESETN",
           "ps8_0_axi_periph/ARESETN",
-          "ps8_0_axi_periph/S01_ARESETN"
+          "ps8_0_axi_periph/S01_ARESETN",
+          "H_Accerlation_IP_v1_0_0/s00_axi_aresetn"
         ]
       },
       "zynq_ultra_ps_e_0_pl_clk0": {
@@ -1836,11 +1836,11 @@
           "zynq_ultra_ps_e_0/maxihpm0_fpd_aclk",
           "ps8_0_axi_periph/S00_ACLK",
           "rst_ps8_0_99M/slowest_sync_clk",
-          "H_Accerlation_IP_v1_0_0/s00_axi_aclk",
           "ps8_0_axi_periph/M00_ACLK",
           "ps8_0_axi_periph/ACLK",
           "zynq_ultra_ps_e_0/maxihpm1_fpd_aclk",
-          "ps8_0_axi_periph/S01_ACLK"
+          "ps8_0_axi_periph/S01_ACLK",
+          "H_Accerlation_IP_v1_0_0/s00_axi_aclk"
         ]
       },
       "zynq_ultra_ps_e_0_pl_resetn0": {
